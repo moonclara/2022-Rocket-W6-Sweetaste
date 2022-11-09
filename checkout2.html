@@ -1,10 +1,85 @@
----
-title: Sweetaste
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    Sweetaste
+  </title>
+  <!-- fontawesome css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <!-- customized css-->
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <!-- mobile -->
+  <nav class="navbar navbar-expand-lg bg-white py-6 d-lg-none d-block">
+    <div class="container">
+      <button class="navbar-toggler border-0 px-6" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <img src="./assets/images/dehaze-24px.png" alt="hamburger">
+      </button>
+      <a class="navbar-brand d-block d-sm-none mx-auto" href="index.html">
+        <img src="./assets/images/logotype-sm-dark.svg" alt="logo" width="115" height="18">
+      </a>
+
+      <a href="cart.html" class="ps-sm-7 ps-0 pe-6 pe-sm-0 order-lg-2">
+        <img src="./assets/images/shopping_cart.png" alt="cart">
+      </a>
+
+      <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto text-center mt-6 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-secondary-dark fw-bold px-6" aria-current="page" href="index.html">首頁</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary-dark fw-bold px-6" href="product.html">甜點</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary-dark fw-bold px-6" href="login.html">登入</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- pc -->
+  <nav class="navbar navbar-expand-lg bg-white py-6 d-lg-block d-none">
+    <div class="container">
+      <button class="navbar-toggler border-0 px-6" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <img src="./assets/images/dehaze-24px.png" alt="hamburger">
+      </button>
+      <a class="navbar-brand flex-grow-1 d-none d-sm-block" href="index.html">
+        <img src="./assets/images/logo-all-dark.svg" alt="logo" width="220" height="42">
+      </a>
+      <div class="d-lg-flex d-block align-items-lg-center">
+        <a href="cart.html" class="ps-sm-7 ps-0 pe-6 pe-sm-0 order-lg-2">
+          <img src="./assets/images/shopping_cart.png" alt="cart">
+        </a>
+        <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto text-center mt-6 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-secondary-dark fw-bold px-6" aria-current="page" href="index.html">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary-dark fw-bold px-6" href="product.html">甜點</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary-dark fw-bold px-6" href="login.html">登入</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
 <section class="checkout2 pt-lg-6 pb-lg-10">
     <div class="container">
         <div class="row g-0 gx-lg-8">
@@ -116,3 +191,66 @@ current: index
         </div>
     </div>
 </section>
+
+    <footer class="footer">
+      <!-- 訂閱你我的甜蜜郵件 -->
+      <div class="bg-secondary-dark p-6">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="offset-sm-1 col-sm-4 col-12 mb-sm-0 mb-6 text-center">
+              <img src="./assets/images/logo-light.svg" alt="logo-light" width="24" height="24"
+                class="me-8 align-middle">
+              <span class="font-Helvetica-Neue text-secondary-light fs-4 align-middle">訂閱你我的甜蜜郵件</span>
+            </div>
+            <div class="offset-sm-1 col-sm-5 col-12">
+              <div class="input-group subscribe-icon">
+                <input type="text" class="form-control rounded-0 px-8 py-3" aria-label="Recipient's username"
+                  aria-describedby="button-addon2">
+                <button class="btn btn-primary rounded-0 px-4 py-3 border-0" type="button" id="button-addon2">
+                  <img src="./assets/images/arrow_forward-24px.png" alt="mail-send" width="16" height="16">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="bg-secondary-light p-6">
+        <div class="container">
+          <div class="d-flex justify-content-between mb-lg-6">
+            <div class="d-flex flex-column justify-content-between">
+              <img src=".//assets/images/logotype-lg-dark.svg" alt="logotype" width="172" height="27" class="mb-9">
+              <p class="text-secondary-dark lh-base font-Helvetica-Neue mb-9 mb-lg-0">
+                07-1234-5678 <br>
+                sweetaste@email.com 800 <br>
+                高雄市新興區幸福路 520 號 <br>
+              </p>
+            </div>
+            <img src="./assets/images/text-sm.svg" alt="text-sm" class="d-none d-lg-block" width="60" height="219">
+          </div>
+          <div class="d-lg-flex justify-content-lg-between align-items-lg-center">
+            <div class="mb-4 mb-lg-0">
+              <a href="">
+                <img src="./assets/images/ic-line@.svg" alt="line@" width="32" height="32" class="me-2">
+              </a>
+              <a href="">
+                <img src="./assets/images/ic-facebook.svg" alt="facebook" width="32" height="32">
+              </a>
+            </div>
+            <p class="font-Times text-secondary-dark">© 2018 Sweetaste* All Rights Reserved</p>
+          </div>
+
+
+
+        </div>
+      </div>
+    </footer>
+
+    <!-- fontawesome js -->
+    <script src="https://kit.fontawesome.com/deb7cdead9.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <!-- customized js-->
+    <script src="./assets/js/all.js"></script>
+</body>
+
+</html>

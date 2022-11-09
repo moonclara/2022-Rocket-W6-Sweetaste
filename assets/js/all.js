@@ -1,9 +1,11 @@
+"use strict";
+
 $(function () {
   console.log('Hello Bootstrap5');
-});
+}); //product.html
 
-//product.html
 $('.product-list-item').click(function (e) {
   e.preventDefault();
-  $( this).toggleClass( "active" );
- })
+  $(this).toggleClass("active");
+});
+//# sourceMappingURL=all.js.map
