@@ -1,0 +1,27 @@
+---
+title: Sweetaste
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<section class="pb-lg-10 pb-0">
+    <div class="container">
+        <div class="checkout-sucess">
+            <div class="d-grid gap-6">
+                <img src="./assets/images/bar_payment_success.svg" alt="bar_payment_success" width="190" height="22"
+                    class="mx-auto">
+                <img src="./assets/images/paySuccess.svg" alt="paySuccess" width="190" height="46" class="mx-auto">
+            </div>
+            <!-- mobile -->
+            <a href="index.html" class="d-grid d-lg-block d-none mt-7">
+                <button class="btn btn-primary fs-4 fw-bold text-secondary-dark px-13 py-3" type="button">繼續逛逛</button>
+            </a>
+        </div>
+
+    </div>
+    <!-- pc -->
+    <a href="index.html" class="d-grid d-block d-lg-none">
+        <button class="btn btn-primary fs-4 fw-bold text-secondary-dark py-3" type="button">繼續逛逛</button>
+    </a>
+</section>

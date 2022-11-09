@@ -1,0 +1,33 @@
+.cart {
+  form {
+
+    button,
+    input {
+      width: 48px;
+      height: 48px;
+      margin-left: -5px;
+    }
+  }
+
+  .order {
+    background: $secondary-dark;
+    color: $secondary-light;
+
+    @include pad {
+      background: $white;
+      color: $secondary-dark;
+
+    }
+
+    h4 {
+      border-bottom: 1px solid $secondary-light;
+
+      @include pad {
+        background: $secondary-light;
+        color: $secondary-dark;
+        border-bottom-color: transparent;
+      }
+
+    }
+  }
+}

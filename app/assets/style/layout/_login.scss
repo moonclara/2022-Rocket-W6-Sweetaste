@@ -1,0 +1,83 @@
+.login {
+    max-width: 780px;
+    margin: 0 auto;
+
+    .login-account {
+        width: 50%;
+        margin-top: -15px;
+        margin-bottom: -15px;
+
+        @include pad {
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 36px;
+        }
+
+        .login-user {
+            position: relative;
+            text-indent: 64px;
+            margin-bottom: 16px;
+
+            img {
+                position: absolute;
+                top: 25%;
+                left: 20px;
+            }
+
+            input {
+                text-indent: 44px;
+            }
+        }
+
+        .login-password {
+            position: relative;
+            text-indent: 64px;
+            margin-bottom: 16px;
+
+            img {
+                position: absolute;
+                top: 25%;
+                left: 20px;
+            }
+
+            input {
+                text-indent: 44px;
+            }
+        }
+    }
+}
+
+.login-community {
+    width: 50%;
+
+    @include pad {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+
+    li {
+        @include pad {
+            width: 33%;
+        }
+    }
+
+    p {
+        margin-bottom: 36px;
+    }
+
+    a {
+        width: 100%;
+        height: 56px;
+        background: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background: $secondary-dark;
+        }
+    }
+}

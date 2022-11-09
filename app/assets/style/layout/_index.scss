@@ -1,0 +1,182 @@
+.banner {
+  .banner-img {
+    height: 496px;
+    background-image: url(../images/home_banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -2;
+
+    @include pad-below {
+      max-width: 100%;
+      height: 277px;
+    }
+  }
+
+  .banner-items {
+    width: 100%;
+    height: 256px;
+    display: flex;
+    justify-content: center;
+    padding: 0 80px;
+    margin-top: -90px;
+    position: relative;
+    z-index: 1;
+
+    @include pad-below {
+      padding: 0;
+      margin-top: 0;
+      height: 180px;
+    }
+
+  }
+
+
+  .banner-item {
+    width: 33%;
+    position: relative;
+    /* 裁切多餘區域 */
+    overflow: hidden;
+    margin: 1px;
+
+    .banner-item-1 {
+      max-width: 100%;
+      height: 100%;
+      background-image: url(../images/SW02.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      /* 加入模糊 */
+      filter: blur(5px);
+      z-index: -1;
+    }
+
+    .banner-item-2 {
+      max-width: 100%;
+      height: 100%;
+      background-image: url(../images/SW05.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      /* 加入模糊 */
+      filter: blur(5px);
+      z-index: -1;
+    }
+
+    .banner-item-3 {
+      max-width: 100%;
+      height: 100%;
+      background-image: url(../images/SW03.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      /* 加入模糊 */
+      filter: blur(5px);
+      z-index: -1;
+    }
+
+    a {
+      width: 100%;
+      height: 100%;
+      // 透明度 0.8 的深綠色半透明遮罩
+      background: rgba(63, 93, 69, .8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      writing-mode: vertical-lr;
+      letter-spacing: 8px;
+      color: $white;
+
+      &:hover {
+        background: rgba(255, 225, 128, .8);
+        color: $secondary-dark;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+
+.whyselect {
+  .whyselect-bg {
+    background: $secondary-light;
+  }
+
+  .whyselect-img {
+    min-width: 460px;
+    min-height: 460px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+
+    @include pad {
+      min-width: 375px;
+      object-fit: cover
+    }
+
+    @include pad-below {
+      width: 100%;
+      margin-top: unset;
+      margin-bottom: unset;
+    }
+  }
+
+  .whyselect-title-img {
+    width: 89px;
+    height: 307px;
+    margin-top: -20px;
+
+    @include pad-below {
+      min-width: 196px;
+      // max-width: 100%;
+      height: 60px;
+    }
+  }
+
+  .whyselecttext {
+    height: 280px;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    color: $secondary;
+    font-weight: light;
+    margin-top: 70px;
+    line-height: 2;
+
+    @include pad-below {
+      -webkit-writing-mode: unset;
+      writing-mode: unset;
+      height: unset;
+      margin-top: unset;
+    }
+
+  }
+}
+
+
+.dessert {
+  position: relative;
+
+  .card-tag {
+    width: 36px;
+    position: absolute;
+    left: 20px;
+    padding: 10px;
+  }
+
+  .card-favorite {
+    position: absolute;
+    right: 22px;
+    top: 19px;
+  }
+
+  .card-item {
+    font-size: 20px;
+    padding: 14px 0;
+    width: 100%;
+  }
+
+  .card-cart:hover {
+    background: $secondary-dark;
+    color: $white !important;
+    transition: .5s;
+  }
+}

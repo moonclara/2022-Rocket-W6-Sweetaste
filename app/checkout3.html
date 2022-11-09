@@ -1,0 +1,155 @@
+---
+title: Sweetaste
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<section class="checkout2 pt-lg-6 pb-lg-10">
+    <div class="container">
+        <div class="row g-0 gx-lg-8">
+            <div class="offset-lg-1 col-lg-6">
+                <div class="px-9 py-6 bg-secondary-dark text-secondary-light">
+                    <div class="d-flex justify-content-between align-items-center mb-6">
+                        <h4 class="fw-bold fs-2">發票</h4>
+                        <img src="./assets/images/bar_invoice.svg" alt="bar_invoice" width="190" height="24">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="nav nav-pills mb-6 w-100" id="pills-tab" role="tablist">
+                                <li class="nav-item w-50 d-grid" role="presentation">
+                                    <button
+                                        class="border border-secondary-light text-secondary-light fs-5 fw-bold rounded-0 py-3 nav-link active"
+                                        id="pills-eleInvoice-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-eleInvoice" type="button" role="tab"
+                                        aria-controls="pills-eleInvoice" aria-selected="true">電子發票</button>
+                                </li>
+                                <li class="nav-item w-50 d-grid" role="presentation">
+                                    <button
+                                        class="border border-secondary-light text-secondary-light fs-5 fw-bold rounded-0 py-3 nav-link"
+                                        id="pills-emailInvoice-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-emailInvoice" type="button" role="tab"
+                                        aria-controls="pills-emailInvoice" aria-selected="false">郵寄發票</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-eleInvoice" role="tabpanel"
+                                    aria-labelledby="pills-eleInvoice-tab">
+                                    <form class="row g-3">
+                                        <div class="col-12">
+                                            <label for="e-mail" class="form-label fs-5 fw-bold">電子郵件信箱</label>
+                                            <input type="text" class="form-control" id="e-mail"
+                                                placeholder="example@email.com">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="uniformNum" class="form-label fs-5 fw-bold">統一編號(選填)</label>
+                                            <input type="text" class="form-control" id="uniformNum"
+                                                placeholder="12345678">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="pills-emailInvoice" role="tabpanel"
+                                    aria-labelledby="pills-emailInvoice-tab">
+                                    <form class="row g-3">
+                                        <div class="col-6">
+                                            <label for="city" class="form-label fs-5 fw-bold">地址</label>
+                                            <div class="sort-icon">
+                                                <select id="city" class="form-select">
+                                                    <option>縣市</option>
+                                                    <option>臺北市</option>
+                                                    <option>臺中市</option>
+                                                    <option selected>高雄市</option>
+                                                </select>
+                                                <img src="./assets/images/sort-solid.svg" alt="sort" width="24"
+                                                    height="24">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="mb-3 form-check d-flex justify-content-end">
+                                                <input type="checkbox"
+                                                    class="form-check-input rounded-0 d-lg-block d-none"
+                                                    id="exampleCheck1">
+                                                <label class="form-check-label ms-2 d-none"
+                                                    for="exampleCheck1">同運送地址</label>
+                                            </div>
+                                            <div class="sort-icon">
+                                                <select id="area" class="form-select">
+                                                    <option>區</option>
+                                                    <option selected>新興區</option>
+                                                    <option>前鎮區</option>
+                                                    <option>三民區</option>
+                                                </select>
+                                                <img src="./assets/images/sort-solid.svg" alt="sort" width="24"
+                                                    height="24">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <input type="text" class="form-control" id="address" placeholder="幸福路520號">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="uniformNum" class="form-label fs-5 fw-bold">統一編號(選填)</label>
+                                            <input type="text" class="form-control" id="uniformNum"
+                                                placeholder="12345678">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="checkout-sucess.html" class="d-grid">
+                    <button class="btn btn-primary fs-4 fw-bold text-secondary-dark py-3" type="button">確認結帳</button>
+                </a>
+            </div>
+            <div class="col-lg-4 d-lg-block d-none">
+                <div class="text-secondary mb-8">
+                    <h4 class="bg-secondary-light text-center fw-bold py-3">訂單摘要</h4>
+                    <ul class="px-8 py-3 border border-secondary-light">
+                        <li class="d-flex justify-content-between mb-2">
+                            <span>小計</span>
+                            <span>NT$ 2,700</span>
+                        </li>
+                        <li class="d-flex justify-content-between mb-3">
+                            <span>運費</span>
+                            <span>NT$ 300</span>
+                        </li>
+                        <li class="d-flex justify-content-between fs-5 fw-bold">
+                            <span>總計</span>
+                            <span>NT$ 3,000</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-secondary">
+                    <h4 class="bg-secondary-light text-center fw-bold py-3">購物清單</h4>
+                    <ul class="px-8 py-3 border border-secondary-light d-grid gap-3">
+                        <li class="d-flex justify-content-between align-items-center">
+                            <img src="./assets/images/p-8.jpg" alt="dessert" width="120" height="80"
+                                class="d-lg-block d-none">
+                            <div>
+                                <p>焦糖馬卡龍(2)</p>
+                                <p class="fs-5 fw-bold">NT$ 900</p>
+                            </div>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <img src="./assets/images/p-5.png" alt="dessert" width="120" height="80"
+                                class="d-lg-block d-none">
+                            <div>
+                                <p>焦糖馬卡龍(2)</p>
+                                <p class="fs-5 fw-bold">NT$ 900</p>
+                            </div>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center">
+                            <img src="./assets/images/p-3.png" alt="dessert" width="120" height="80"
+                                class="d-lg-block d-none">
+                            <div>
+                                <p>焦糖馬卡龍(2)</p>
+                                <p class="fs-5 fw-bold">NT$ 900</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
